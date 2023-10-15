@@ -2,6 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col-9">
+        <div class="navbar">
+          <app-navbar (ejectSearchName)="callSearchBooks($event)" [showItems]="searchBooks"></app-navbar>
+        </div>
         <div class="pane">
           <app-card *ngFor="let item of books"
           [bookCard]="item"

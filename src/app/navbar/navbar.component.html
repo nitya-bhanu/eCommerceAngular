@@ -1,0 +1,11 @@
+<input type="text" placeholder="search your book here" name="inputBook" #inputBook>
+<button (click)="getBookName(inputBook.value)">Go</button>
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="showItems?.image" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">{{showItems?.title}}</h4>
+      <h5 class="card-author">By {{showItems?.author}} </h5>
+      <p class="card-price">Price: {{showItems?.price?.displayValue}} <span class="card-curr"> {{showItems?.price?.currency}} </span></p>
+      <p class="card-text"> {{showItems?.summary |slice:0:50}} </p>
+    </div>
+  </div>

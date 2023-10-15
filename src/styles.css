@@ -4,3 +4,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.navbar{
+    width: fit-content;
+    padding: 20px;
+    text-align: center;
+}
+.navbar input{
+    width: 30vw;
+    margin: 10px;
+    margin-left: 3vw;
+}

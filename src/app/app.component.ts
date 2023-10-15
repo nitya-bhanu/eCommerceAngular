@@ -25,6 +25,7 @@ interface bookCarts {
 export class AppComponent {
   title = 'libraryManagement';
   total=0;
+  searchBooks:booksCard|undefined;
   books = [
     {
       "ISBN": 9789000307975,
@@ -398,5 +399,11 @@ export class AppComponent {
   {
     this.cartBooks = this.cartBooks.filter((x) => { return x.ISBN != e.ISBN })
     console.log(this.cartBooks)
+  }
+  callSearchBooks(e:string){
+    let x:booksCard|undefined;
+    x=this.books.find(p=> p.title===e);
+    if(x)
+    this.searchBooks=x
   }
 }
